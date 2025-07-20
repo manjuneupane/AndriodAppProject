@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageActivity"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/messagesToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green"
+        android:elevation="4dp"
+        android:orientation="horizontal"       android:gravity="center_vertical"    app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="48dp"  android:layout_height="48dp"
+            android:padding="12dp"      android:layout_marginStart="4dp" android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless" app:srcCompat="@drawable/back" /> <TextView
+        android:layout_width="0dp"          android:layout_height="wrap_content"
+        android:layout_weight="1"           android:text="Messages"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" android:layout_marginEnd="52dp"     android:singleLine="true"           android:ellipsize="end" />          </LinearLayout>
+
+    <TextView
+        android:id="@+id/messagesContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your messages will appear here."
+        android:textSize="18sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/messagesToolbar" app:layout_constraintBottom_toBottomOf="parent"          app:layout_constraintStart_toStartOf="parent"           app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.4"                 />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

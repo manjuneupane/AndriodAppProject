@@ -1,0 +1,96 @@
+plugins {
+    alias(libs.plugins.android.application)
+    id("com.google.gms.google-services") // This plugin is essential for Firebase
+}
+
+android {
+    namespace = "com.example.osmonlinesabjimandi"
+    compileSdk = 35 // Keep this at the latest stable version
+
+    defaultConfig {
+        applicationId = "com.example.osmonlinesabjimandi"
+        minSdk = 24
+        targetSdk = 35 // Keep this at the latest stable version
+        versionCode = 1
+        versionName = "1.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            // minifyEnabled false // Uncomment and set to true for production to shrink code
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        // Ensure these match your project's Java version (e.g., 1.8, 11, 17)
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        viewBinding = true // Keep if you are using View Binding
+    }
+}
+
+dependencies {
+    // AndroidX Libraries (core UI components)
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.activity)
+    implementation(libs.constraintlayout)
+    implementation(libs.androidx.viewpager2)
+    implementation(libs.androidx.recyclerview) // Only one declaration needed
+
+    // Lifecycle Libraries (for LiveData and ViewModel)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel)
+    // Removed: implementation (libs.androidx.appcompat.v161) - likely redundant if libs.appcompat is used
+
+    // Firebase BoM (Bill of Materials) - MUST be declared FIRST among Firebase dependencies.
+    // This imports a BOM that ensures all Firebase libraries use compatible versions.
+    // The version here (33.15.0) should be the LATEST stable version. Always check Firebase documentation.
+    implementation platform('com.google.firebase:firebase-bom:33.15.0')
+
+    // Firebase Product Dependencies - Their versions are now managed by the BoM.
+    // ONLY include the Firebase products you are ACTUALLY using.
+    implementation(libs.firebase.database) // For Firebase Realtime Database
+    implementation(libs.firebase.auth)     // For Firebase Authentication
+
+    // !!! IMPORTANT: The following lines were causing conflicts and are REMOVED !!!
+    // REMOVED: implementation 'com.google.firebase:firebase-firestore' // You said you're using Realtime DB, so Firestore is conflicting
+    // REMOVED: implementation 'com.google.firebase:firebase-database'   // Duplicate of libs.firebase.database
+
+    // Image Loading Libraries
+    implementation(libs.glide)
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+    implementation libs.androidx.navigation.fragment
+    implementation libs.androidx.navigation.ui
+    implementation libs.firebase.firestore
+    implementation libs.firebase.storage// Use the libs.toml alias
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0' // Glide's annotation processor
+    implementation("com.squareup.picasso:picasso:2.8") // Picasso library
+
+    // Network Request Libraries (Retrofit and Gson)
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    // Removed duplicate Retrofit/Gson declarations
+
+    implementation 'com.google.android.material:material:1.x.x'
+
+    // Other Third-Party Libraries
+    implementation(libs.chip.navigation.bar) // Only one declaration needed
+
+    // Testing Libraries
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+
+
+
+    // For CardView in item_product_cart.xml
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // For Material Components (TextInputLayout, Button etc.)
+    implementation 'com.google.android.material:material:1.12.0'
+}

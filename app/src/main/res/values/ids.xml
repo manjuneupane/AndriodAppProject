@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ProductImage" type="id">@id/productImage</item>
+    <item name="ProductName" type="id">@id/ProductName</item>
+    <item name="itemProductPrice" type="id">@id/itemProductPrice</item>
+    <item name="itemAddToCartBtn" type="id">@id/itemAddToCartBtn</item>
+</resources>

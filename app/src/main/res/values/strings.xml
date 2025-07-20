@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">OSM(Online Sabji Mandi)</string>
+    <string name="title_splash"><font color="#000000">Your Digital Mandi \n for \n Daily Freshness</font></string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="user_name_default">user_name_default\n</string>
+    <string name="user_email_default">user_email_default</string>
+    <string name="guest_user_label">guest_user_label</string>
+    <string name="not_logged_in_label">not_logged_in_label</string>
+    <string name="no_user_logged_in_message">no_user_logged_in_message</string>
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FBF1C2"/>
+
+        <!-- Main content in ScrollView -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Product Image -->
+                <ImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tomato"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Product Name -->
+                <TextView
+                    android:id="@+id/productName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tomato"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Product Price -->
+                <TextView
+                    android:id="@+id/productPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price: ₹30"
+                    android:textSize="18sp"
+                    android:textColor="@color/green"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Add to Cart Button -->
+                <Button
+                    android:id="@+id/btnAddToCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add to Cart"
+                    android:backgroundTint="@color/green"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Add to Favourite Button -->
+                <Button
+                    android:id="@+id/btnAddToFavourite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="❤ Add to Favourite"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="16sp"
+                    android:backgroundTint="#FFE6E6"
+                    android:padding="12dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

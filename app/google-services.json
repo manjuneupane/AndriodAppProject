@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "675488205186",
+    "project_id": "osm-online-sabji-mandi",
+    "storage_bucket": "osm-online-sabji-mandi.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675488205186:android:efd5b2e00e7261a1e4279b",
+        "android_client_info": {
+          "package_name": "com.example.osmonlinesabjimandi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbcGDi8pQkOgObF1bJVSrLrJsPF-n5ZMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
